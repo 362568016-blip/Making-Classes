@@ -11,12 +11,14 @@ namespace Making_Classes
         private int _sides;
         private int _roll;
         private Random _generator;
+        private ConsoleColor _color;
 
         public Die()
         {
             _generator = new Random();
             _sides = 6;
             _roll = _generator.Next(1, _sides + 1);
+            _color = ConsoleColor.Gray;
         }
         //public Die(int sides)
         //{
@@ -32,6 +34,12 @@ namespace Making_Classes
             //set { _roll = value; }
         }
 
+        public ConsoleColor Color
+        {
+            get { return _color; }
+            set { _color = value; }
+        }
+
         public override string ToString()
         {
             return _roll.ToString();
@@ -44,6 +52,8 @@ namespace Making_Classes
 
         public void DrawRoll()
         {
+            ConsoleColor currentForeColor = Console.ForegroundColor;
+            Console.ForegroundColor = _color;
             Console.WriteLine("-----");
             {
                 if (_roll == 1)
@@ -82,6 +92,7 @@ namespace Making_Classes
                     Console.WriteLine("|o  o|");
                     Console.WriteLine("|o  o|");
                 }
+                Console.ForegroundColor = currentForeColor;
             }
 
 
