@@ -20,12 +20,12 @@ namespace Making_Classes
             _roll = _generator.Next(1, _sides + 1);
             _color = ConsoleColor.Gray;
         }
-        //public Die(int sides)
-        //{
-        //    _generator = new Random();
-        //    _sides = _sides;
-        //    _roll = _generator.Next(1, _sides + 1);
-        //}
+        public Die(int sides)
+        {
+            _generator = new Random();
+            _sides = _sides;
+            _roll = _generator.Next(1, _sides + 1);
+        }
 
         //properties
         public int Roll 
