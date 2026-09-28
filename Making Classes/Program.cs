@@ -30,13 +30,33 @@ if (die1.Roll == 1 && die2.Roll == 1)
     }
 
 
-if dieTotal = (7)
+if (dieTotal == 7)
 {
     Console.WriteLine("Lucky 7!");
 }
 
 
-if dieTotal = (2, 4, 6, 8, 10, 12) 
+if (dieTotal == 2) 
+{
+    Console.WriteLine("Even sum!");
+}
+if (dieTotal == 4)
+{
+    Console.WriteLine("Even sum!");
+}
+if (dieTotal == 6)
+{
+    Console.WriteLine("Even sum!");
+}
+if (dieTotal == 8)
+{
+    Console.WriteLine("Even sum!");
+}
+if (dieTotal == 10)
+{
+    Console.WriteLine("Even sum!");
+}
+if (dieTotal == 12)
 {
     Console.WriteLine("Even sum!");
 }
